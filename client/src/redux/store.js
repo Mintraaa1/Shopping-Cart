@@ -1,13 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { pageReducer } from "./pages/pageReducer";
-import productReducer from "./product/productSlice";
+import cartReducer from "./cart/cartReducer";
+import productReducer from "./product/productSlice"; //
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    pages: pageReducer,
-    products: productReducer,
+    cart: cartReducer,
+    product: productReducer, // ชื่อ "product" ตรงนี้ต้องตรงกับที่ใช้ใน page.jsx
   },
-  devTools: true,
 });
 
 export default store;

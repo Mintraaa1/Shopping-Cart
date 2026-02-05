@@ -1,20 +1,16 @@
 import React from 'react'
 import "./index.css";
-import Navbar from './component/navbar.jsx'
-import Page from './Pages/page.jsx'
 import { Provider } from 'react-redux';
 import { store } from './redux/store.js';
-
+import { RouterProvider } from 'React'; 
+import Router from './router/Router.jsx';
 
 function App() {
-
   return (
     <Provider store={store}>
-      <Navbar />
-      <Page />
-  
+      <RouterProvider router={Router} />
     </Provider>
   );
 }
 
-export default App
+export default App;
